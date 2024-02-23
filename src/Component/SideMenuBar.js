@@ -1,18 +1,24 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faFileWord, faBookReader, faBookMedical, faChartBar, faFileExport, faTabletAlt, faAtom, faFolder, faGripHorizontal, faHouseUser } from '@fortawesome/free-solid-svg-icons';
+import { FaChevronLeft } from "react-icons/fa";
+import { Dropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SideMenuBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-   
-    <div className="col-md-3 col-lg-2 sidebar-offcanvas pl-0" id="sidebar" role="navigation" style={{ backgroundColor: "#e9ecef",}}>
+    <div className="col-md-3 col-lg-2 sidebar-offcanvas pl-0" id="sidebar" role="navigation" style={{ backgroundColor: "#e9ecef" }}>
       <img src='SIAQ.png' alt='SIAQ' />
-      <ul className="nav flex-column sticky-top pl-0 pt-5 p-3 mt-3 ">
-        <li className="nav-item mb-2">
+      <hr />
+      <ul className="nav flex-column sticky-top pl-0 pt-5 p-3 mt-2 ">
+        <li className="nav-item mb-2" >
           <Link to="#" className="nav-link text-secondary">
             <FontAwesomeIcon icon={faGripHorizontal} className="font-weight-bold" />
-            <span className="ml-3">Dashboard</span>
+            <span className="ml-3 p-3">Dashboard</span>
           </Link>
         </li>
         <li className="nav-item mb-2">
@@ -21,6 +27,7 @@ const SideMenuBar = () => {
             <span className="ml-3">User</span>
           </Link>
         </li>
+        
         <li className="nav-item mb-2">
           <Link to="#" className="nav-link text-secondary">
             <FontAwesomeIcon icon={faBookReader} className="font-weight-bold" />
