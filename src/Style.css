@@ -1,0 +1,24 @@
+.pro-inner-item {
+    cursor: pointer;
+  }
+  
+  .pro-icon-wrapper {
+    display: inline-block;
+    margin-right: 5px; /* Adjust as needed */
+  }
+  
+  .pro-icon svg {
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    viewBox: 0 0 24 24;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    height: 25px;
+    width: 25px;
+  }
+  
+  .pro-item-content {
+    display: inline-block;
+    vertical-align: middle;
+  }

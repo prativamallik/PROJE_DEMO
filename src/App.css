@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+* {
+  scrollbar-color: #c5cbd5 #fff;
+  scrollbar-width: thin;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: poppins!important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app{
+  display: flex;
+  position: relative;
+  background: white;
+  height: 100%;
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pro-sidebar{
+  bottom: 0;
+  top: 0;
+  position: sticky;
+  height: 100vh;
+  color: #adadad;
+  min-width: 270px;
+  text-align: left;
+  transition: width,left,right,.3s;
+    width: 270px;
+    z-index: 1009;
+}
+pro-sidebar .pro-sidebar-inner {
+  background: #f9fafb!important;
+  box-shadow: 4px 0 20px 0 #0000000d;
+  height: 100%;
+  position: relative;
+  z-index: 101;
+}
+.pro-sidebar>.pro-sidebar-inner>.pro-sidebar-layout {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  z-index: 101;
+}
+.pro-sidebar>.pro-sidebar-inner>.pro-sidebar-layout .pro-sidebar-header {
+  border-bottom: 1px solid #adadad33;
+}
+.pro-sidebar .pro-menu {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.pro-sidebar .pro-menu .pro-menu-item {
+  font-size: 15px;
+}
+.pro-sidebar .pro-menu .pro-menu-item>.pro-inner-item {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  display: flex;
+  padding: 8px 35px 8px 20px;
+  position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.pro-sidebar .pro-menu .pro-menu-item>.pro-inner-item>.pro-item-content {
+  flex-grow: 1;
+  flex-shrink: 1;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pro-sidebar .pro-menu .pro-menu-item>.pro-inner-item>.pro-item-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.brand-image {
+  margin-left: 30%;
+  width: 45%;
+}
+img, svg {
+  vertical-align: middle;
+}
+.pro-sidebar>.pro-sidebar-inner>.pro-sidebar-layout ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.pro-sidebar .pro-menu .pro-menu-item.pro-sub-menu.open>.pro-inner-item>.pro-arrow-wrapper .pro-arrow {
+  transform: rotate(45deg);
+}
+.pro-sidebar .pro-menu .pro-menu-item.pro-sub-menu>.pro-inner-item>.pro-arrow-wrapper {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pro-sidebar .pro-menu .pro-menu-item.pro-sub-menu>.pro-inner-item>.pro-arrow-wrapper .pro-arrow {
+  border-color: #334d6e;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2.5px;
+  transform: rotate(-45deg);
+  transition: transform .3s;
+  vertical-align: middle;
 }
